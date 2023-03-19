@@ -1,27 +1,35 @@
 @font-face {
   font-family: "Avenir";
-  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  src: url("/assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
   font-weight: 400;
 }
 @font-face {
   font-family: "Avenir";
-  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+  src: url("/assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
   font-weight: 700;
 }
 @font-face {
   font-family: "Avenir";
-  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+  src: url("/assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
   font-weight: 600;
 }
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+body {
+  font-family: "Avenir";
+}
+
+body {
   font-family: "Avenir";
 }
 
 img {
   width: 100%;
+  height: auto;
 }
 
 .header {
@@ -46,6 +54,7 @@ img {
   display: flex;
   width: 100%;
   justify-content: space-around;
+  padding: 0 0 16px 0;
 }
 @media screen and (min-width: 1280px) {
   .nav__links {
@@ -53,7 +62,43 @@ img {
   }
 }
 .nav__logo {
-  width: 50%;
-  padding-bottom: 8px;
-  padding-top: 8px;
+  width: 45%;
+  padding-bottom: 16px;
+  padding-top: 16px;
+}
+
+.hero {
+  background-image: url(../assets/images/hero-bio.jpg);
+  color: #ffffff;
+  opacity: 90%;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 240px;
+}
+.hero h1 {
+  padding: 35% 0% 30% 5%;
+}
+@media screen and (min-width: 768px) {
+  .hero h1 {
+    padding: 35% 0% 30% 5%;
+  }
+}
+
+.main {
+  padding: 5%;
+}
+.main__text {
+  display: flex;
+  flex-direction: column;
+}
+.main__text p {
+  padding: 4% 0 4% 0;
+}
+.main__quote {
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+.main__quote p {
+  padding: 0 0 3% 0;
 }/*# sourceMappingURL=bio.css.map */

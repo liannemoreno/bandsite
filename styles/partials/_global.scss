@@ -1,4 +1,13 @@
 @use './typography' as *;
+@use './mixins' as *;
+@use './variables' as *;
+
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+   
+}
 
 body{
     font-family: 'Avenir';

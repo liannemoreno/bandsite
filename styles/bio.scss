@@ -1,17 +1,19 @@
+@use './partials/global' as *;
+@use './partials/mixins' as *;
 @use './partials/typography' as *;
+@use './partials/variables' as *;
 
 
-*{
-    box-sizing: border-box;
-    padding:0;
-    margin:0;
+
+body{
     font-family: 'Avenir';
-   
 }
+
 
 
 img {
     width: 100%;
+    height: auto;
 }
 
 .header{
@@ -38,6 +40,7 @@ img {
         display: flex;
         width: 100%;
         justify-content: space-around;
+        padding: 0 0 16px 0;
 
         @include desktop {
             justify-content: unset;
@@ -45,11 +48,56 @@ img {
     }
 
     &__logo{
-        width: 50%;
+        width: 45%;
         padding-bottom:16px;
         padding-top:16px;
 
     }
+}
+
+.hero{
+    background-image: url(../assets/images/hero-bio.jpg);
+    color:$color-primary-white;
+    opacity: calc(90%);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 240px;
+
+    & h1{
+        padding: 35% 0% 30% 5%;
+
+        @include tablet{
+            padding: 35% 0% 30% 5%;
+
+        }
+    }
+
+}
+
+.main{
+    padding:5%;
+    
+    &__text{
+        display:flex;
+        flex-direction: column;
+
+        & p{
+            padding: 4% 0 4% 0;
+
+        }
+    }
+    
+    &__quote{
+        padding-bottom: 5%;
+        padding-top: 5%;
+        
+        & p{
+            padding: 0 0 3% 0;
+        }
+    }
+       
+
 }
 
 
