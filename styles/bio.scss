@@ -1,0 +1,55 @@
+@use './partials/typography' as *;
+
+
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    font-family: 'Avenir';
+   
+}
+
+
+img {
+    width: 100%;
+}
+
+.header{
+    background-color: $color-primary-black;
+    
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $color-primary-white;
+    
+    @include desktop {
+        flex-direction: row;
+    }
+
+    &__link {
+        margin-left: 1rem;
+        
+    }
+
+    &__links {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+
+        @include desktop {
+            justify-content: unset;
+        }
+    }
+
+    &__logo{
+        width: 50%;
+        padding-bottom:16px;
+        padding-top:16px;
+
+    }
+}
+
+

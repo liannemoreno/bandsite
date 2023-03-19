@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 600;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Avenir";
+}
+
+img {
+  width: 100%;
+}
+
+.header {
+  background-color: #323232;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+}
+@media screen and (min-width: 1280px) {
+  .nav {
+    flex-direction: row;
+  }
+}
+.nav__link {
+  margin-left: 1rem;
+}
+.nav__links {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+@media screen and (min-width: 1280px) {
+  .nav__links {
+    justify-content: unset;
+  }
+}
+.nav__logo {
+  width: 50%;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}/*# sourceMappingURL=bio.css.map */
