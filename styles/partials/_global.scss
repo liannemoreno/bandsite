@@ -13,3 +13,139 @@ body{
     font-family: 'Avenir';
 }
 
+.header{
+    background-color: $color-primary-black;
+    
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $color-primary-white;
+    
+    @include desktop {
+        flex-direction: row;
+    }
+
+    @include tablet {
+        flex-direction: row;
+    }   
+    
+
+    &__logo{
+        @include tablet {
+            margin-right: 30px;
+            padding: 25px 30px 27px;
+        }   
+    }
+
+    &__links {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+            
+        @include tablet {
+          justify-content: flex-start;
+        }   
+        
+        @include desktop {
+            justify-content: unset;
+        }
+    }
+    
+    &_link {
+        width: 100%;
+        text-align: center;
+        padding: 10px 10px;
+        
+        @include tablet {
+            padding: 30px 30px 26px;
+            width: auto;
+          }   
+
+        &.active{
+            border-bottom: 5px solid $color-primary-white;
+        }
+    }
+
+    &__logo{
+        width: 45%;
+        padding-bottom:16px;
+        padding-top:16px;
+
+    //     @include tablet {
+            
+    //       } 
+    // }
+    }
+}
+
+
+footer{
+    background-color: $color-primary-black;
+    color: $color-primary-white;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+
+    p{
+        font-size:13px;
+        line-height: 18px;
+        font-weight: 400;
+
+        @include tablet{
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+
+        }
+    }    
+
+}
+
+
+
+.footer{
+    &__heading{
+    
+        &-social{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 16px 104px 16px 0;
+
+        }
+    }
+
+    &__management{
+        padding: 8px 0 64px 0;    
+        
+        &-info{
+            padding: 8px 0 8px 0;
+        }
+
+        &-name{
+            padding: 8px 0 8px 0;
+        }
+
+        &-location{
+            padding: 8px 0 8px 0;
+        }
+
+        &-email{
+            padding: 8px 0 16px 0;
+        }
+
+        
+    }
+
+    &__logo{
+        padding: 0 0 16px 0;
+    }
+
+    &__copyright {
+        padding: 8px 0 16px 0;
+    }
+}
+

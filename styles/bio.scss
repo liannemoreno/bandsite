@@ -4,54 +4,50 @@
 @use './partials/variables' as *;
 
 
-
 body{
     font-family: 'Avenir';
 }
-
-
 
 img {
     width: 100%;
     height: auto;
 }
 
-.header{
-    background-color: $color-primary-black;
-    
+h1{
+    font-size:24px;
+    line-height: 32px;
+    font-weight:700;
+
+    @include tablet{
+        font-size:60px;
+        line-height: 68px;
+        font-weight:700;
+    }
 }
 
-.nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: $color-primary-white;
-    
-    @include desktop {
-        flex-direction: row;
+h2{
+    font-size:24px;
+    line-height: 32px;
+    font-weight:700;
+
+    @include tablet{
+        font-size:36px;
+        line-height: 44px;
+        font-weight:700;
     }
 
-    &__link {
-        margin-left: 1rem;
-        
-    }
+}
 
-    &__links {
-        display: flex;
-        width: 100%;
-        justify-content: space-around;
-        padding: 0 0 16px 0;
+h3{
 
-        @include desktop {
-            justify-content: unset;
-        }
-    }
+    font-size:14px;
+    line-height: 22px;
+    font-weight:600;
 
-    &__logo{
-        width: 45%;
-        padding-bottom:16px;
-        padding-top:16px;
-
+    @include tablet{
+        font-size:24px;
+        line-height: 32px;
+        font-weight: 600;
     }
 }
 
@@ -63,13 +59,28 @@ img {
     background-position: center;
     width: 100%;
     height: 240px;
+    position:relative;
 
+    @include tablet{
+        height: 453px;
+        background-position: bottom;
+    }
+    
+    &__overlay{
+        background: black;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 30%;
+        z-index: 0;
+    }
     & h1{
         padding: 35% 0% 30% 5%;
+        position:relative;
+        z-index:1;
 
         @include tablet{
-            padding: 35% 0% 30% 5%;
-
+            padding: 26% 0% 0% 5%;
         }
     }
 
@@ -78,13 +89,21 @@ img {
 .main{
     padding:5%;
     
-    &__text{
-        display:flex;
-        flex-direction: column;
+    p{
+        font-size:13px;
+        line-height: 18px;
+        font-weight: 400;
 
-        & p{
-            padding: 4% 0 4% 0;
+        @include tablet{
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: 400;
 
+        }
+    }
+    h2{
+        @include tablet{
+            padding: 16px;
         }
     }
     
@@ -92,12 +111,55 @@ img {
         padding-bottom: 5%;
         padding-top: 5%;
         
-        & p{
+        & h3{
             padding: 0 0 3% 0;
         }
     }
+
+
+    &__text{
+        display:flex;
+        flex-direction: column;
+
+        &-column{
+            display: flex;
+            padding: 0px 8px 0 8px;
+}
+        }
+        
+        
+        & p{
+            padding: 4% 39px 4% 0;
+
+        }
+    }
+    
        
 
-}
 
+
+.gallery {
+    padding: 1rem;
+    margin-bottom: 3rem;
+    background-color: $color-secondary-alabaster;
+
+    &__images {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    &__image {
+        margin: 2%;
+        background-color: grey;
+        width: 96%;
+        // We need a margin because the mockup
+        // 2% x 2 = 4%/img 12% extra margin 
+        // 88/3 = 21%
+        @include desktop {
+            width: 29.33%;
+        }
+
+    }
+}
 
