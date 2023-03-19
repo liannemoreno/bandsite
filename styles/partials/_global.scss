@@ -13,6 +13,44 @@ body{
     font-family: 'Avenir';
 }
 
+h1{
+    font-size:24px;
+    line-height: 32px;
+    font-weight:700;
+
+    @include tablet{
+        font-size:60px;
+        line-height: 68px;
+        font-weight:700;
+    }
+}
+
+h2{
+    font-size:24px;
+    line-height: 32px;
+    font-weight:700;
+
+    @include tablet{
+        font-size:36px;
+        line-height: 44px;
+        font-weight:700;
+    }
+
+}
+
+h3{
+
+    font-size:14px;
+    line-height: 22px;
+    font-weight:600;
+
+    @include tablet{
+        font-size:24px;
+        line-height: 32px;
+        font-weight: 600;
+    }
+}
+
 .header{
     background-color: $color-primary-black;
     
@@ -92,12 +130,10 @@ footer{
     p{
         font-size:13px;
         line-height: 18px;
-        font-weight: 400;
 
         @include tablet{
             font-size: 14px;
             line-height: 20px;
-            font-weight: 400;
 
         }
     }    
@@ -107,45 +143,105 @@ footer{
 
 
 .footer{
-    &__heading{
-    
+    &__heading {
+        
+        @include tablet{
+            display:flex;
+            padding-left: 16px;
+            align-items: baseline;
+        }
+
         &-social{
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
-            padding: 16px 104px 16px 0;
 
+            @include tablet{
+                padding-left: 16px;
+            }
+
+            &-icon{
+                @include tablet{
+                    padding: 0 10px;
+                    margin: 0 10px;
+                    img{
+                        height: 30px;
+                    }
+                }
+            }
         }
     }
 
     &__management{
-        padding: 8px 0 64px 0;    
+        padding: 8px 8px 64px 0;    
         
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 8px 56px 0;
+        }
         &-info{
             padding: 8px 0 8px 0;
+
+            @include tablet{
+                padding: 0 16px;
+                width: 30%;
+            }
         }
 
         &-name{
-            padding: 8px 0 8px 0;
+            padding: 8px 0; 
+            font-weight: 600;
+
+            @include tablet{
+                padding: 16px 0;
+            }
         }
 
         &-location{
-            padding: 8px 0 8px 0;
+            padding: 8px 0;
+
+            @include tablet{
+                padding: 16px 0;
+            }
         }
 
         &-email{
             padding: 8px 0 16px 0;
-        }
 
+            @include tablet{
+                padding: 16px 0;
+            }
+        }
         
     }
 
-    &__logo{
+    &__logo1{
+        display: none;
+
+        @include tablet{
+            display:flex;
+            width: 16%;
+            margin-left:auto;
+        }
+
+    }
+
+    &__logo2{
         padding: 0 0 16px 0;
+
+        @include tablet{
+            display:none;
+        }
+
     }
 
     &__copyright {
         padding: 8px 0 16px 0;
+        font-weight: 600;
+
+        @include tablet{
+            margin-left: 16px;
+        }
     }
 }
 
