@@ -62,20 +62,32 @@ h3{
     align-items: center;
     color: $color-primary-white;
     
-    @include desktop {
-        flex-direction: row;
-    }
 
     @include tablet {
         flex-direction: row;
     }   
+
+    @include desktop {
+        flex-direction: row;
+    }
     
 
     &__logo{
+        padding: 16px 0;
+
+        img{
+            height: 40px;
+        }
+
         @include tablet {
             margin-right: 30px;
-            padding: 25px 30px 27px;
-        }   
+            padding: 20px 30px 20px;
+        }  
+        
+        @include desktop{
+            margin-right: 30px;
+            padding: 20px 30px 20px 96px;
+        }
     }
 
     &__links {
@@ -98,26 +110,28 @@ h3{
         padding: 10px 10px;
         
         @include tablet {
-            padding: 30px 30px 26px;
+            padding: 30px 16px 26px;
             width: auto;
-          }   
+          } 
+          
+        @include desktop{
+            padding: 30px 16px 26px;
+            width: auto;
+          } 
 
         &.active{
             border-bottom: 5px solid $color-primary-white;
         }
-    }
 
-    &__logo{
-        width: 45%;
-        padding-bottom:16px;
-        padding-top:16px;
+    }
+}  
 
     //     @include tablet {
             
     //       } 
     // }
-    }
-}
+    
+
 
 
 footer{

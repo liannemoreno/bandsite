@@ -72,20 +72,32 @@ h3 {
   align-items: center;
   color: #ffffff;
 }
+@media screen and (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+  }
+}
 @media screen and (min-width: 1280px) {
   .nav {
     flex-direction: row;
   }
 }
-@media screen and (min-width: 768px) {
-  .nav {
-    flex-direction: row;
-  }
+.nav__logo {
+  padding: 16px 0;
+}
+.nav__logo img {
+  height: 40px;
 }
 @media screen and (min-width: 768px) {
   .nav__logo {
     margin-right: 30px;
-    padding: 25px 30px 27px;
+    padding: 20px 30px 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .nav__logo {
+    margin-right: 30px;
+    padding: 20px 30px 20px 96px;
   }
 }
 .nav__links {
@@ -110,17 +122,18 @@ h3 {
 }
 @media screen and (min-width: 768px) {
   .nav_link {
-    padding: 30px 30px 26px;
+    padding: 30px 16px 26px;
+    width: auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .nav_link {
+    padding: 30px 16px 26px;
     width: auto;
   }
 }
 .nav_link.active {
   border-bottom: 5px solid #ffffff;
-}
-.nav__logo {
-  width: 45%;
-  padding-bottom: 16px;
-  padding-top: 16px;
 }
 
 footer {
@@ -300,6 +313,12 @@ h3 {
   .hero {
     height: 453px;
     background-position: bottom;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 636px;
+    background-position: center;
   }
 }
 .hero__overlay {
