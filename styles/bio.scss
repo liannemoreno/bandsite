@@ -71,7 +71,7 @@ h3{
     }
     
     &__overlay{
-        background: black;
+        background: $color-secondary-darkblack;
         width: 100%;
         height: 100%;
         position: absolute;
@@ -184,7 +184,7 @@ h3{
     
     &__image {
         margin: 2%;
-        background-color: grey;
+        background-color:$color-secondary-mercury;
         width: 96%;
 
         @include tablet {
