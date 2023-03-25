@@ -272,74 +272,14 @@ footer h2 {
   }
 }
 
-body {
-  font-family: "Avenir";
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-h1 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-}
-@media screen and (min-width: 768px) {
-  h1 {
-    font-size: 3.75rem;
-    line-height: 4.25rem;
-    font-weight: 700;
-  }
-}
-
-h2 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-}
-@media screen and (min-width: 768px) {
-  h2 {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-    font-weight: 700;
-  }
-}
-
-h3 {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-weight: 600;
-}
-@media screen and (min-width: 768px) {
-  h3 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 600;
-  }
-}
-
 .hero {
-  background-image: url(../assets/images/hero-bio.jpg);
+  background-image: url(../assets/images/hero-shows.jpg);
   color: #ffffff;
   opacity: 90%;
   background-size: cover;
   background-position: center;
   width: 100%;
   position: relative;
-}
-@media screen and (min-width: 768px) {
-  .hero {
-    height: 28.3125rem;
-    background-position: bottom;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .hero {
-    height: 39.75rem;
-    background-position: center;
-  }
 }
 .hero__overlay {
   background: #000000;
@@ -349,103 +289,23 @@ h3 {
   opacity: 30%;
   z-index: 0;
 }
+.hero__main {
+  position: relative;
+}
 .hero h1 {
-  padding: 35% 0% 30% 5%;
+  padding: 2% 26% 16% 5%;
   position: relative;
   z-index: 1;
+  font-weight: 600;
 }
 @media screen and (min-width: 768px) {
   .hero h1 {
     padding: 26% 0% 0% 5%;
   }
 }
-
-.main {
-  padding: 5%;
-}
-@media screen and (min-width: 1280px) {
-  .main {
-    padding: 8% 8% 0% 8%;
-  }
-}
-.main p {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-}
-@media screen and (min-width: 768px) {
-  .main p {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-weight: 400;
-  }
-}
-@media screen and (min-width: 768px) {
-  .main h2 {
-    padding: 16px 0;
-  }
-}
-.main__quote {
-  padding-bottom: 5%;
-  padding-top: 5%;
-}
-.main__quote h3 {
-  padding: 0 0 3% 0;
-}
-@media screen and (min-width: 1280px) {
-  .main__quote {
-    padding-right: 22.0625rem;
-  }
-}
-.main__text {
-  display: flex;
-  flex-direction: column;
-}
-.main__text-column {
-  display: flex;
-  padding: 0px 1.5rem;
-}
-@media screen and (min-width: 768px) {
-  .main__text-column {
-    padding: 0px;
-  }
-}
-.main p {
-  padding: 4% 2.4375rem 4% 0;
-}
-
-.gallery {
-  padding: 1rem;
-  margin-bottom: 3rem;
-  background-color: #FAFAFA;
-}
-@media screen and (min-width: 1280px) {
-  .gallery {
-    padding: 5rem 3rem 0rem 3rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .gallery h2 {
-    padding: 2.18rem 0rem 1rem 1rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .gallery h2 {
-    padding-left: 2rem;
-  }
-}
-.gallery__images {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-.gallery__image {
-  margin: 2%;
-  background-color: #E1E1E1;
-  width: 96%;
-}
-@media screen and (min-width: 768px) {
-  .gallery__image {
-    width: 29.33%;
-  }
-}/*# sourceMappingURL=bio.css.map */
+.hero h2 {
+  font-weight: normal;
+  font-size: 1.2rem;
+  position: relative;
+  padding: 10% 0% 5% 5%;
+}/*# sourceMappingURL=shows.css.map */

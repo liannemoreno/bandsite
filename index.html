@@ -15,7 +15,7 @@
             <a href="index.html" class="nav__logo"><img src="assets/logos/Logo-bandsite.svg" alt="nav watermark"></a>
             <div class ="nav__links">
                 <a class="nav_link active">Biography</a>
-                <a class="nav_link">Shows</a>
+                <a href="pages/shows.html" class="nav_link">Shows</a>
             </div>
         </nav>
     </header>
@@ -54,6 +54,26 @@
             <img class="gallery__image" src="assets/images/Photo-gallery-9.jpg" alt="confetti at the end of concert, Hollywood Bowl, Los Angeles 2020">
         </div>
     </section>
+    <section class="comments">
+        <form class="comments-form">
+            <h3 class="comments-form__title">Join the Conversation</h3>
+            <div>
+                <img class="comments-form__image" src="./assets/images/Mohan-muruge.jpg" alt="comment section image">
+            </div>
+            <div class="comments-form__info-container">
+                <label>
+                    Name
+                    <input name="fanName" type="text" placeholder="Enter your name" required>
+                </label>
+                <label>
+                    Comment
+                    <textarea name="inputComment" type="text" placeholder="Add a new comment" wrap="hard" required></textarea>
+                </label>
+                <button class="comments__button" type="button">COMMENT</button>
+            </div>
+        </form>
+    </section>
+    
     <footer>
         <div class="footer__heading">
             <h2>Get in Touch</h2>

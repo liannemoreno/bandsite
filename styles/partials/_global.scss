@@ -146,7 +146,12 @@ footer{
             line-height: 1.25rem;
 
         }
-    }    
+    }
+    
+    h2{
+        font-weight: 600;
+    }
+    
 
 }
 
@@ -164,13 +169,16 @@ footer{
         &-social{
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
+            padding: 3% 52% 0% 0%;
 
             @include tablet{
-                padding-left: 1rem;
+                justify-content: revert;
+                padding: 0% 0% 0% 1rem;
             }
 
             @include desktop{
-                padding-left: 2.25rem;
+                padding: 0% 0% 0% 2.25rem;
             }
 
             &-icon{

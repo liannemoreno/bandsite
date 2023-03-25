@@ -1,0 +1,56 @@
+@use './partials/global' as *;
+@use './partials/mixins' as *;
+@use './partials/typography' as *;
+@use './partials/variables' as *;
+
+
+.hero{
+    background-image: url(../assets/images/hero-shows.jpg);
+    color:$color-primary-white;
+    opacity: calc(90%);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    position:relative;
+
+    // // @include tablet{
+    // //     height: 28.3125rem;
+    // //     background-position: bottom;
+    // // }
+
+    // // @include desktop{
+    // //     height: 39.75rem;
+    // //     background-position: center;
+    // }
+    
+    &__overlay{
+        background: $color-secondary-darkblack;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 30%;
+        z-index: 0;
+    }
+
+    &__main{
+        position:relative;
+    }
+    & h1{
+        padding: 2% 26% 16% 5%;
+        position:relative;
+        z-index:1;
+        font-weight:600;
+
+        @include tablet{
+            padding: 26% 0% 0% 5%;
+        }
+    }
+
+    & h2 {
+        font-weight: normal;
+        font-size: 1.2rem;
+        position: relative;
+        padding: 10% 0% 5% 5%;
+    }
+
+}
