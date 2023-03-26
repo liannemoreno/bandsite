@@ -13,15 +13,15 @@
     width: 100%;
     position:relative;
 
-    // // @include tablet{
-    // //     height: 28.3125rem;
-    // //     background-position: bottom;
-    // // }
+    @include tablet{
+        height: 28.3125rem;
+         background-position: bottom;
+     }
 
-    // // @include desktop{
-    // //     height: 39.75rem;
-    // //     background-position: center;
-    // }
+     @include desktop{
+         height: 39.75rem;
+         background-position: center;
+    }
     
     &__overlay{
         background: $color-secondary-darkblack;
@@ -34,9 +34,14 @@
 
     &__main{
         position:relative;
+    & iframe{
+        padding: 7% 5% 8% 5%;
+        
     }
-    & h1{
-        padding: 2% 26% 16% 5%;
+    
+    }
+    &__main--title{
+        padding: 2% 20% 0% 5%;;
         position:relative;
         z-index:1;
         font-weight:600;
@@ -46,7 +51,7 @@
         }
     }
 
-    & h2 {
+    &__main--subtitle {
         font-weight: normal;
         font-size: 1.2rem;
         position: relative;
@@ -54,3 +59,73 @@
     }
 
 }
+
+.shows{
+
+    &__title{
+        padding: 8% 5% 0 5%;
+        font-weight:600;
+    }
+
+    &__main{
+        padding: 8% 0 8% 0;
+        border-bottom: .0625rem $color-secondary-mercury solid;
+        &-date{
+            @include padding-bottom5;
+            @include padding-sides;
+
+            &--word{
+                @include shows-word;
+
+                }
+            
+             &--detail {
+                @include shows-detail;
+                font-weight:600;
+                }
+
+
+        }
+
+        &-venue, &-location{
+            @include padding-bottom5;
+            @include padding-sides;
+
+            &--word{
+                @include shows-word;
+
+                }
+            
+             &--detail {
+                @include shows-detail;
+                }
+
+        }
+
+        &-button{
+            @include padding-sides;
+            &--style{
+                background-color: $color-primary-black;
+                color:$color-primary-white;
+                border:none;
+                height: 2.5rem;
+                width:100%;
+                border-radius: 4px;
+                cursor: pointer;
+                text-decoration: none;
+                text-align: center;
+                line-height: .625rem;
+
+                &:hoover{
+                    background-color: $color-secondary-darkblack;
+
+                }
+            }
+        }
+
+            
+
+
+    }
+}
+

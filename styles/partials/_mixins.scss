@@ -13,3 +13,24 @@
       @content;
     }
 }
+
+@mixin padding-bottom5 {
+  padding-bottom:$padding-bottom-5;
+  
+}
+
+@mixin shows-word{
+  color:$color-primary-silver;
+  font-size:$p-size-mobil;
+  padding-bottom:$padding-bottom-2;
+
+}
+
+@mixin shows-detail{
+  font-size:$subheader-mobil;
+}
+
+@mixin padding-sides{
+      padding-left:5%;
+      padding-right:5%;   
+}

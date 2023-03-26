@@ -34,78 +34,74 @@ const showList =[
 const mainSection=document.querySelector("main");
 const showsSection = document.createElement("section");
 mainSection.appendChild(showsSection);
+showsSection.classList.add("shows");
 const showTitle=document.createElement("h2");
 showsSection.appendChild(showTitle);
-showTitle.classList.add("main__title");
+showTitle.classList.add("shows__title");
 showTitle.innerText= "Shows";
 
 for (let i=0; i< showList.length; i++){
     const showsDetails = document.createElement("div");
     showsSection.appendChild(showsDetails);
-    showsDetails.classList.add("main__shows");
+    showsDetails.classList.add("shows__main");
 
     const dateDiv= document.createElement("div");
     showsDetails.appendChild(dateDiv);
 
-    dateDiv.classList.add("main__shows-date");
+    dateDiv.classList.add("shows__main-date");
 
     const date= document.createElement("p");
     dateDiv.appendChild(date);
-    date.innerText="Date";
+    date.classList.add("shows__main-date--word");
+    date.innerText="DATE";
+    
 
     const dateDetails= document.createElement("p");
     dateDiv.appendChild(dateDetails);
+    dateDetails.classList.add("shows__main-date--detail");
     dateDetails.innerText=showList[i].date;
     
 
     const venueDiv= document.createElement("div");
     showsDetails.appendChild(venueDiv);
-    venueDiv.classList.add("main__shows-venue");
+    venueDiv.classList.add("shows__main-venue");
 
     const venue= document.createElement("p");
     venueDiv.appendChild(venue);
-    venue.innerText="Venue";
+    venue.classList.add("shows__main-venue--word");
+    venue.innerText="VENUE";
 
     const venueDetails= document.createElement("p");
     venueDiv.appendChild(venueDetails);
+    venueDetails.classList.add("shows__main-venue--detail");
     venueDetails.innerText=showList[i].venue;
 
 
     const locationDiv= document.createElement("div");
     showsDetails.appendChild(locationDiv);
 
-    locationDiv.classList.add("main__shows-location");
+    locationDiv.classList.add("shows__main-location");
 
     const location= document.createElement("p");
     locationDiv.appendChild(location);
-    location.innerText="Location";
+    location.classList.add("shows__main-location--word");
+    location.innerText="LOCATION";
 
     const locationDetails= document.createElement("p");
     locationDiv.appendChild(locationDetails);
+    locationDetails.classList.add("shows__main-location--detail");
     locationDetails.innerText=showList[i].location;
 
-
+    const buttonWrap= document.createElement("div");
+    buttonWrap.classList.add("shows__main-button");
+    showsDetails.appendChild(buttonWrap);
     const buyButton= document.createElement("button");
-    showsDetails.appendChild(buyButton);
-    buyButton.classList.add("main__shows-buyButton");
-    buyButton.innerText="Buy Tickets";
+    buttonWrap.appendChild(buyButton);
+    buyButton.classList.add("shows__main-button--style");
+    buyButton.innerText="BUY TICKETS";
 
 }
     
 
-
-//     const location= document.createElement("p");
-//     showsDetails.appendChild(location);
-//     location.classList.add("main__shows-location");
-//     location.innerText="Location";
-//     console.log(showList[i]["location"])
-    
-
-    
-   
-    
-    
-
-
-// }
+  
 

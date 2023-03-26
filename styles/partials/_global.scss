@@ -94,6 +94,7 @@ h3{
         display: flex;
         width: 100%;
         justify-content: space-around;
+        list-style-type: none;
             
         @include tablet {
           justify-content: flex-start;
@@ -102,9 +103,13 @@ h3{
         @include desktop {
             justify-content: unset;
         }
-    }
+        
     
-    &_link {
+    }
+
+ 
+    
+    ul {
         width: 100%;
         text-align: center;
         padding: .625rem .625rem;
@@ -117,15 +122,30 @@ h3{
         @include desktop{
             padding: 1.875rem 1rem 1.625rem;
             width: auto;
-          } 
+          }
 
-        &.active{
+    }
+
+    &__item {
+        width:50%;
+        transition: border-bottom .3s;
+
+        .active{
             border-bottom: .3125rem solid $color-primary-white;
+            padding: 6px;
+        }
+    }  
+
+    &__link {
+        text-decoration:none;
+
+        &:hover{
+            color: $color-secondary-mercury;
         }
 
     }
-}  
 
+}
 
 footer{
     background-color: $color-primary-black;
@@ -133,6 +153,7 @@ footer{
     display: flex;
     flex-direction: column;
     padding: 5%;
+    margin-top: 5%;
 
     @include desktop{
         padding: 5% 5% 2% 5%;;
@@ -254,6 +275,7 @@ footer{
 
     &__logo2{
         padding: 0 0 1rem 0;
+        width:50%;
 
         @include tablet{
             display:none;

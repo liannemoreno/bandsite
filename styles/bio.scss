@@ -131,11 +131,11 @@ h3{
 
     &__text{
         display:flex;
-        flex-direction: column;
 
         &-column{
             display: flex;
             padding: 0px 1.5rem;
+            flex-direction: column;
             
             @include tablet{
                 padding:0px;
@@ -151,13 +151,11 @@ h3{
         }
     }
     
-       
-
 
 
 .gallery {
     padding: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     background-color: $color-secondary-alabaster;
 
 
@@ -194,3 +192,75 @@ h3{
     }
 }
 
+.convers{
+
+    &__title{
+        font-weight:600;
+        padding:0% 5% 5% 5%;
+
+    }
+}
+
+.form{
+    display:flex;
+    color:$color-primary-silver;
+    font-size: $p-size-mobil;
+    justify-content: space-evenly;
+
+    &__image{
+        border-radius: 50%;
+        width:2.25rem;
+        height:2.25rem;
+    }
+
+    &__info-container{
+        display: flex;
+        flex-direction: column;
+
+        
+        &-name{
+            display: flex;
+            flex-direction: column;
+
+            &--input{
+                padding-bottom:4px;
+                color:$color-secondary-mercury;
+
+
+            }
+        }
+
+        &-comment{
+            display: flex;
+            flex-direction: column;
+            
+        
+
+            &--textarea{
+                height: 2.25rem;
+                border-radius: 4px;
+                padding: .75rem;
+                border: 1px solid $secondary-mercury;
+                margin-bottom: 1rem;
+                width: 75vw;
+            }
+
+        }
+
+    
+    }
+
+    
+    }
+
+textarea.form__info-container-comment--textarea{
+
+
+    height: 2.25rem;
+    border-radius: 4px;
+    padding: .75rem;
+    border: 1px solid $secondary-mercury;
+    margin-bottom: 1rem;
+    width: 75vw;
+
+}

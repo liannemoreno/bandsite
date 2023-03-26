@@ -61,7 +61,7 @@ const comments = [
     return commentCard;
   }
   
-  function renderComments(event) {
+  function renderComments() {
     const commentsEl = document.querySelector(".comments");
     commentsEl.innerHTML = "";
   
@@ -85,7 +85,7 @@ const comments = [
     renderComments();
   }
   
-  const form = document.querySelector(".form__info-container");
+  const form = document.querySelector("form");
   form.addEventListener("submit", handleFormSubmit);
   
   renderComments();

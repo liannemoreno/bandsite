@@ -104,6 +104,7 @@ h3 {
   display: flex;
   width: 100%;
   justify-content: space-around;
+  list-style-type: none;
 }
 @media screen and (min-width: 768px) {
   .nav__links {
@@ -115,25 +116,36 @@ h3 {
     justify-content: unset;
   }
 }
-.nav_link {
+.nav ul {
   width: 100%;
   text-align: center;
   padding: 0.625rem 0.625rem;
 }
 @media screen and (min-width: 768px) {
-  .nav_link {
+  .nav ul {
     padding: 1.875rem 1rem 1.625rem;
     width: auto;
   }
 }
 @media screen and (min-width: 1280px) {
-  .nav_link {
+  .nav ul {
     padding: 1.875rem 1rem 1.625rem;
     width: auto;
   }
 }
-.nav_link.active {
+.nav__item {
+  width: 50%;
+  transition: border-bottom 0.3s;
+}
+.nav__item .active {
   border-bottom: 0.3125rem solid #ffffff;
+  padding: 6px;
+}
+.nav__link {
+  text-decoration: none;
+}
+.nav__link:hover {
+  color: #E1E1E1;
 }
 
 footer {
@@ -142,6 +154,7 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 5%;
+  margin-top: 5%;
 }
 @media screen and (min-width: 1280px) {
   footer {
@@ -256,6 +269,7 @@ footer h2 {
 }
 .footer__logo2 {
   padding: 0 0 1rem 0;
+  width: 50%;
 }
 @media screen and (min-width: 768px) {
   .footer__logo2 {
@@ -399,11 +413,11 @@ h3 {
 }
 .main__text {
   display: flex;
-  flex-direction: column;
 }
 .main__text-column {
   display: flex;
   padding: 0px 1.5rem;
+  flex-direction: column;
 }
 @media screen and (min-width: 768px) {
   .main__text-column {
@@ -416,7 +430,7 @@ h3 {
 
 .gallery {
   padding: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   background-color: #FAFAFA;
 }
 @media screen and (min-width: 1280px) {
@@ -448,4 +462,37 @@ h3 {
   .gallery__image {
     width: 29.33%;
   }
+}
+
+.convers__title {
+  font-weight: 600;
+  padding: 0% 5% 5% 5%;
+}
+
+.form {
+  display: flex;
+  color: #afafaf;
+  font-size: 13px;
+  justify-content: space-evenly;
+}
+.form__image {
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+}
+.form__info-container {
+  display: flex;
+  flex-direction: column;
+}
+.form__info-container-name {
+  display: flex;
+  flex-direction: column;
+}
+.form__info-container-name input {
+  padding-bottom: 4px;
+  color: #E1E1E1;
+}
+.form__info-container-comment {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=bio.css.map */
