@@ -58,10 +58,8 @@ for (let i=0; i< showList.length; i++){
     dateDetails.innerText=showList[i].date;
     
 
-
     const venueDiv= document.createElement("div");
     showsDetails.appendChild(venueDiv);
-
     venueDiv.classList.add("main__shows-venue");
 
     const venue= document.createElement("p");
