@@ -90,7 +90,6 @@ for (let i=0; i< showList.length; i++){
     buyButton.classList.add("main__shows-buyButton");
     buyButton.innerText="Buy Tickets";
 
-    
 }
     
 
