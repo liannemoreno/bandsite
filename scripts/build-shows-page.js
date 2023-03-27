@@ -111,7 +111,7 @@ for (let i=0; showList.length; i++){
 const showsSec = document.querySelectorAll(".shows__main");
 
 showsSec.forEach(event => {
-    event.addEventLisner('click',() =>{
+    showsSec.addEventLisner('click',() =>{
         showsSec.forEach(sec=>{
             sec.classList.remove('select');
         });

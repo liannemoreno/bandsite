@@ -86,11 +86,11 @@ h3 {
   padding: 1rem 0;
 }
 .nav__logo img {
-  height: 40px;
+  height: 2.5rem;
 }
 @media screen and (min-width: 768px) {
   .nav__logo img {
-    height: 30px;
+    height: 1.875rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -143,7 +143,7 @@ h3 {
 }
 @media screen and (min-width: 768px) {
   .nav__item {
-    padding-left: 50px;
+    padding-left: 3.125rem;
   }
   .nav__item .active {
     border-bottom: 0.3125rem solid #ffffff;
@@ -360,6 +360,18 @@ footer h2 {
     padding: 5% 47% 1% 5%;
   }
 }
+@media screen and (min-width: 1280px) {
+  .hero__main iframe {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__main--header {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .hero__main--title {
   padding: 2% 20% 0% 5%;
   position: relative;
@@ -368,7 +380,7 @@ footer h2 {
 }
 @media screen and (min-width: 768px) {
   .hero__main--title {
-    font-size: 57px;
+    font-size: 3.5625rem;
     padding: 0% 20% 0% 5%;
   }
 }
@@ -380,7 +392,7 @@ footer h2 {
 }
 @media screen and (min-width: 768px) {
   .hero__main--subtitle {
-    font-size: 27px;
+    font-size: 1.6875rem;
     padding: 6% 0% 4% 5%;
     font-weight: 600;
   }
@@ -416,11 +428,11 @@ footer h2 {
 }
 .shows__main-date--word {
   color: #afafaf;
-  font-size: 13px;
+  font-size: 0.8125rem;
   padding-bottom: 2%;
 }
 .shows__main-date--detail {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
 }
 .shows__main-venue, .shows__main-location {
@@ -430,11 +442,11 @@ footer h2 {
 }
 .shows__main-venue--word, .shows__main-location--word {
   color: #afafaf;
-  font-size: 13px;
+  font-size: 0.8125rem;
   padding-bottom: 2%;
 }
 .shows__main-venue--detail, .shows__main-location--detail {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .shows__main-button {
   padding-left: 5%;
@@ -446,7 +458,7 @@ footer h2 {
   border: none;
   height: 2.5rem;
   width: 100%;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   cursor: pointer;
   text-decoration: none;
   text-align: center;

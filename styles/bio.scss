@@ -84,10 +84,16 @@ h3 {
         position: relative;
         z-index: 1;
         font-weight: 600;
-        font-size: 30px;
+        font-size: 1.875rem;
 
         @include tablet {
-            padding: 26% 0% 0% 5%;
+            padding: 21% 0% 0% 5%;
+            font-size: 3.4375rem;
+
+        }
+
+        @include desktop{
+            font-size: 3.75rem;
         }
     }
 
@@ -116,7 +122,7 @@ h3 {
     h2 {
         @include padding-bottom5;
         @include tablet {
-            padding: 16px 0;
+            padding: 1rem 0;
         }
     }
 
@@ -229,6 +235,9 @@ h3 {
         border-bottom:none;
     }
 
+    @include desktop{
+        margin: 0 15%;
+    }
 
     &__image {
         border-radius: 50%;
@@ -240,6 +249,8 @@ h3 {
             height: 3rem;
             
         }
+
+      
     }
 
     &__info-container {
@@ -264,18 +275,22 @@ h3 {
                 background-color: $color-secondary-alabaster;
                 border-radius: .25rem;
                 border-width: .009rem;
-
-                @include tablet{
-                    width: 65vw;
-                }
+               
                 &::placeholder {
                     color: $color-primary-black;
                     font-family: Avenir;
                     padding: 2%;
 
-
                 }
 
+                @include tablet{
+                    width: 65vw;
+                }
+
+                @include desktop{
+                    width: 45vw;
+                }
+                
             }
         }
 
@@ -296,15 +311,20 @@ h3 {
                 background-color: $color-secondary-alabaster;
                 height: 8rem;
 
+                &::placeholder {
+                    color: $color-primary-black;
+                    padding: .5rem;
+                    font-family: Avenir;
+                }
+
                 @include tablet{
                     height: 5rem;
                     width: 65vw;
                 }
 
-                &::placeholder {
-                    color: $color-primary-black;
-                    padding: .5rem;
-                    font-family: Avenir;
+                @include desktop{
+                    height: 5rem;
+                    width: 45vw;
                 }
             }
 
@@ -316,6 +336,10 @@ h3 {
         @include tablet{
             padding-left:21.5625rem;
         }
+
+        @include desktop{
+            padding-left:26.5625rem;
+        }
     }
     &__button {
         background-color: $color-primary-black;
@@ -323,7 +347,7 @@ h3 {
         border: none;
         height: 2.5rem;
         width: 100%;
-        border-radius: 4px;
+        border-radius: .25rem;
         cursor: pointer;
         text-decoration: none;
         text-align: center;
@@ -348,6 +372,10 @@ h3 {
     @include tablet{
         margin: 0 12%;
         border-top: .0625rem $color-secondary-mercury solid;
+    }
+
+    @include desktop{
+        margin: 0 23%;
     }
 }
 .comment{
