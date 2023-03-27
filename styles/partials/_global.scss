@@ -58,8 +58,8 @@ h3{
 
 .nav {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     color: $color-primary-white;
     
 
@@ -77,6 +77,11 @@ h3{
 
         img{
             height: 40px;
+
+            @include tablet{
+                height: 30px;
+
+            }
         }
 
         @include tablet {
@@ -93,7 +98,7 @@ h3{
     &__links {
         display: flex;
         width: 100%;
-        justify-content: space-around;
+        justify-content: space-between;
         list-style-type: none;
             
         @include tablet {
@@ -115,7 +120,7 @@ h3{
         padding: .625rem 0 0 0 ;
         
         @include tablet {
-            padding: 1.875rem 1rem 1.625rem;
+            padding: 1.875rem 0rem 1.625rem;
             width: auto;
           } 
           
@@ -128,23 +133,46 @@ h3{
 
     &__item {
         width:50%;
+
+        @include tablet{
+            padding-left: 50px;
+
+            .active{
+                border-bottom: .3125rem solid $color-primary-white;
+            }
+
+        }
     }
     .active{
         border-bottom: .3125rem solid $color-primary-white;
         font-weight: 600;
-        color:$color-primary-white;
+
+        @include tablet{
+            border-bottom:none;
+        }
     }
 
     &__link {
         text-decoration:none;
         color: $color-primary-white;
 
+        &.active2{
+            @include tablet{
+                padding-bottom:1rem;
+                color: $color-primary-white;
+                border-bottom: .3125rem solid $color-primary-white;
+            }
+        }    
         &:hover{
             width:50%;
             transition: border-bottom .5s;
             color: $color-primary-white;
             border-bottom: .3125rem solid $color-primary-white;
             font-weight:400;
+
+            @include tablet{
+                padding-bottom:1rem;
+            }
         }
 
     }

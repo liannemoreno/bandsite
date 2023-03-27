@@ -68,8 +68,8 @@ h3 {
 
 .nav {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   color: #ffffff;
 }
 @media screen and (min-width: 768px) {
@@ -89,6 +89,11 @@ h3 {
   height: 40px;
 }
 @media screen and (min-width: 768px) {
+  .nav__logo img {
+    height: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
   .nav__logo {
     margin-right: 1.875rem;
     padding: 1.25rem 1.875rem 1.25rem;
@@ -103,7 +108,7 @@ h3 {
 .nav__links {
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   list-style-type: none;
 }
 @media screen and (min-width: 768px) {
@@ -123,7 +128,7 @@ h3 {
 }
 @media screen and (min-width: 768px) {
   .nav ul {
-    padding: 1.875rem 1rem 1.625rem;
+    padding: 1.875rem 0rem 1.625rem;
     width: auto;
   }
 }
@@ -136,14 +141,33 @@ h3 {
 .nav__item {
   width: 50%;
 }
+@media screen and (min-width: 768px) {
+  .nav__item {
+    padding-left: 50px;
+  }
+  .nav__item .active {
+    border-bottom: 0.3125rem solid #ffffff;
+  }
+}
 .nav .active {
   border-bottom: 0.3125rem solid #ffffff;
   font-weight: 600;
-  color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .nav .active {
+    border-bottom: none;
+  }
 }
 .nav__link {
   text-decoration: none;
   color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .nav__link.active2 {
+    padding-bottom: 1rem;
+    color: #ffffff;
+    border-bottom: 0.3125rem solid #ffffff;
+  }
 }
 .nav__link:hover {
   width: 50%;
@@ -151,6 +175,11 @@ h3 {
   color: #ffffff;
   border-bottom: 0.3125rem solid #ffffff;
   font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .nav__link:hover {
+    padding-bottom: 1rem;
+  }
 }
 
 footer {
@@ -423,19 +452,27 @@ h3 {
 }
 .main__text {
   display: flex;
+  flex-direction: column;
 }
 .main__text-column {
   display: flex;
-  padding: 0px 1.5rem;
   flex-direction: column;
 }
 @media screen and (min-width: 768px) {
   .main__text-column {
-    padding: 0px;
+    flex-direction: row;
   }
 }
+.main__text h3 {
+  padding: 0 0 4% 4%;
+}
 .main p {
-  padding: 4% 2.4375rem 4% 0;
+  padding-top: 4%;
+}
+@media screen and (min-width: 768px) {
+  .main p {
+    padding: 0 4%;
+  }
 }
 
 .gallery {
@@ -488,10 +525,22 @@ h3 {
   border-bottom: 0.0625rem #E1E1E1 solid;
   padding-bottom: 5%;
 }
+@media screen and (min-width: 768px) {
+  .form {
+    margin: 0% 9%;
+    border-bottom: none;
+  }
+}
 .form__image {
   border-radius: 50%;
   width: 2.25rem;
   height: 2.25rem;
+}
+@media screen and (min-width: 768px) {
+  .form__image {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 .form__info-container {
   display: flex;
@@ -513,6 +562,11 @@ h3 {
   background-color: #FAFAFA;
   border-radius: 0.25rem;
   border-width: 0.009rem;
+}
+@media screen and (min-width: 768px) {
+  .form__info-container-name--input {
+    width: 65vw;
+  }
 }
 .form__info-container-name--input::-moz-placeholder {
   color: #323232;
@@ -540,6 +594,12 @@ h3 {
   background-color: #FAFAFA;
   height: 8rem;
 }
+@media screen and (min-width: 768px) {
+  .form__info-container-comment--textarea {
+    height: 5rem;
+    width: 65vw;
+  }
+}
 .form__info-container-comment--textarea::-moz-placeholder {
   color: #323232;
   padding: 0.5rem;
@@ -549,6 +609,11 @@ h3 {
   color: #323232;
   padding: 0.5rem;
   font-family: Avenir;
+}
+@media screen and (min-width: 768px) {
+  .form__wrapper {
+    padding-left: 21.5625rem;
+  }
 }
 .form__button {
   background-color: #323232;
@@ -565,9 +630,20 @@ h3 {
 .form__button:hoover {
   background-color: #000000;
 }
+@media screen and (min-width: 768px) {
+  .form__button {
+    width: 9.375rem;
+  }
+}
 
 .comments {
   margin: 0% 2%;
+}
+@media screen and (min-width: 768px) {
+  .comments {
+    margin: 0 12%;
+    border-top: 0.0625rem #E1E1E1 solid;
+  }
 }
 
 .comment {
@@ -583,6 +659,12 @@ h3 {
   color: transparent;
   background-color: #E1E1E1;
   border: none;
+}
+@media screen and (min-width: 768px) {
+  .comment__image {
+    height: 3rem;
+    width: 8rem;
+  }
 }
 .comment__image::before {
   content: "Image not found";

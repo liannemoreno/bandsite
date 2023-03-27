@@ -136,22 +136,30 @@ h3 {
 
     &__text {
         display: flex;
+        flex-direction: column;
 
         &-column {
             display: flex;
-            padding: 0px 1.5rem;
             flex-direction: column;
 
             @include tablet {
-                padding: 0px;
+                flex-direction: row;
             }
 
         }
+
+        & h3 {
+            padding: 0 0 4% 4%;
+        }
     }
 
-
+    
     & p {
-        padding: 4% 2.4375rem 4% 0;
+        padding-top: 4% ;
+
+        @include tablet{
+            padding: 0 4%;
+        }
 
     }
 }
@@ -216,10 +224,22 @@ h3 {
     border-bottom: .0625rem $color-secondary-mercury solid;
     @include padding-bottom5;
 
+    @include tablet{
+        margin: 0% 9%;
+        border-bottom:none;
+    }
+
+
     &__image {
         border-radius: 50%;
         width: 2.25rem;
         height: 2.25rem;
+
+        @include tablet{
+            width: 3rem;
+            height: 3rem;
+            
+        }
     }
 
     &__info-container {
@@ -245,6 +265,9 @@ h3 {
                 border-radius: .25rem;
                 border-width: .009rem;
 
+                @include tablet{
+                    width: 65vw;
+                }
                 &::placeholder {
                     color: $color-primary-black;
                     font-family: Avenir;
@@ -273,6 +296,11 @@ h3 {
                 background-color: $color-secondary-alabaster;
                 height: 8rem;
 
+                @include tablet{
+                    height: 5rem;
+                    width: 65vw;
+                }
+
                 &::placeholder {
                     color: $color-primary-black;
                     padding: .5rem;
@@ -284,6 +312,11 @@ h3 {
 
     }
 
+    &__wrapper{
+        @include tablet{
+            padding-left:21.5625rem;
+        }
+    }
     &__button {
         background-color: $color-primary-black;
         color: $color-primary-white;
@@ -295,10 +328,15 @@ h3 {
         text-decoration: none;
         text-align: center;
         line-height: .625rem;
+        
 
         &:hoover{
             background-color: $color-secondary-darkblack;
 
+        }
+
+        @include tablet{
+            width: 9.375rem;
         }
     }
 }
@@ -306,12 +344,19 @@ h3 {
 .comments{
     
     margin: 0% 2%;
+
+    @include tablet{
+        margin: 0 12%;
+        border-top: .0625rem $color-secondary-mercury solid;
+    }
 }
 .comment{
     border-bottom: .0625rem $color-secondary-mercury solid;
     display:flex;
     flex-direction: row;
     padding: 4% 1%;
+
+    
 
     &__image{
         border-radius: 50%;
@@ -320,6 +365,11 @@ h3 {
         color:transparent;
         background-color:$color-secondary-mercury;
         border:none;
+        
+        @include tablet{
+            height: 3rem;
+            width: 8rem;
+        }
 
         &::before {
             content: "Image not found";
