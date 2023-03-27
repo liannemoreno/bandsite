@@ -119,7 +119,7 @@ h3 {
 .nav ul {
   width: 100%;
   text-align: center;
-  padding: 0.625rem 0.625rem;
+  padding: 0.625rem 0 0 0;
 }
 @media screen and (min-width: 768px) {
   .nav ul {
@@ -135,17 +135,22 @@ h3 {
 }
 .nav__item {
   width: 50%;
-  transition: border-bottom 0.3s;
 }
-.nav__item .active {
+.nav .active {
   border-bottom: 0.3125rem solid #ffffff;
-  padding: 6px;
+  font-weight: 600;
+  color: #ffffff;
 }
 .nav__link {
   text-decoration: none;
+  color: #ffffff;
 }
 .nav__link:hover {
-  color: #E1E1E1;
+  width: 50%;
+  transition: border-bottom 0.5s;
+  color: #ffffff;
+  border-bottom: 0.3125rem solid #ffffff;
+  font-weight: 400;
 }
 
 footer {
@@ -269,7 +274,7 @@ footer h2 {
 }
 .footer__logo2 {
   padding: 0 0 1rem 0;
-  width: 50%;
+  width: 30%;
 }
 @media screen and (min-width: 768px) {
   .footer__logo2 {

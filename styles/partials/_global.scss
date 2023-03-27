@@ -112,7 +112,7 @@ h3{
     ul {
         width: 100%;
         text-align: center;
-        padding: .625rem .625rem;
+        padding: .625rem 0 0 0 ;
         
         @include tablet {
             padding: 1.875rem 1rem 1.625rem;
@@ -128,23 +128,28 @@ h3{
 
     &__item {
         width:50%;
-        transition: border-bottom .3s;
-
-        .active{
-            border-bottom: .3125rem solid $color-primary-white;
-            padding: 6px;
-        }
-    }  
+    }
+    .active{
+        border-bottom: .3125rem solid $color-primary-white;
+        font-weight: 600;
+        color:$color-primary-white;
+    }
 
     &__link {
         text-decoration:none;
+        color: $color-primary-white;
 
         &:hover{
-            color: $color-secondary-mercury;
+            width:50%;
+            transition: border-bottom .5s;
+            color: $color-primary-white;
+            border-bottom: .3125rem solid $color-primary-white;
+            font-weight:400;
         }
 
     }
 
+    
 }
 
 footer{
@@ -275,7 +280,7 @@ footer{
 
     &__logo2{
         padding: 0 0 1rem 0;
-        width:50%;
+        width:30%;
 
         @include tablet{
             display:none;

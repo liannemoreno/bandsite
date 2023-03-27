@@ -28,7 +28,7 @@ const comments = [
     
     const commentsImg = document.createElement("img");
     commentsImg.classList.add("comment__image");
-    commentsImg.setAttribute("src", " ");
+    commentsImg.setAttribute("src", "https://via.placeholder.com");
     commentCard.appendChild(commentsImg);
   
     const commentSection = document.createElement("div");

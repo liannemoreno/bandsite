@@ -4,7 +4,7 @@
 @use './partials/variables' as *;
 
 
-body{
+body {
     font-family: 'Avenir';
 }
 
@@ -13,144 +13,149 @@ img {
     height: auto;
 }
 
-h1{
-    font-size:1.5rem;
+h1 {
+    font-size: 1.5rem;
     line-height: 2rem;
-    font-weight:700;
+    font-weight: 700;
 
-    @include tablet{
-        font-size:3.75rem;
+    @include tablet {
+        font-size: 3.75rem;
         line-height: 4.25rem;
-        font-weight:700;
+        font-weight: 700;
     }
 }
 
-h2{
-    font-size:1.5rem;
+h2 {
+    font-size: 1.5rem;
     line-height: 2rem;
-    font-weight:700;
+    font-weight: 600;
 
-    @include tablet{
-        font-size:2.25rem;
+    @include tablet {
+        font-size: 2.25rem;
         line-height: 2.75rem;
-        font-weight:700;
+        font-weight: 600;
     }
 
 }
 
-h3{
+h3 {
 
-    font-size:.875rem;
+    font-size: .875rem;
     line-height: 1.375rem;
-    font-weight:600;
+    font-weight: 600;
 
-    @include tablet{
-        font-size:1.5rem;
+    @include tablet {
+        font-size: 1.5rem;
         line-height: 2rem;
         font-weight: 600;
     }
 }
 
-.hero{
+.hero {
     background-image: url(../assets/images/hero-bio.jpg);
-    color:$color-primary-white;
-    opacity: calc(90%);
+    color: $color-primary-white;
     background-size: cover;
     background-position: center;
     width: 100%;
-    position:relative;
+    height:20rem;
+    position: relative;
 
-    @include tablet{
+    @include tablet {
         height: 28.3125rem;
         background-position: bottom;
     }
 
-    @include desktop{
+    @include desktop {
         height: 39.75rem;
         background-position: center;
     }
-    
-    &__overlay{
-        background: $color-secondary-darkblack;
+
+    &__overlay {
+        background: $color-primary-black;
         width: 100%;
         height: 100%;
         position: absolute;
-        opacity: 30%;
+        opacity: 50%;
         z-index: 0;
     }
-    & h1{
-        padding: 35% 0% 30% 5%;
-        position:relative;
-        z-index:1;
 
-        @include tablet{
+    & h1 {
+        padding: 25% 0% 30% 5%;
+        position: relative;
+        z-index: 1;
+        font-weight: 600;
+        font-size: 30px;
+
+        @include tablet {
             padding: 26% 0% 0% 5%;
         }
     }
 
 }
 
-.main{
-    padding:5%;
+.main {
+    padding: 5%;
 
-    @include desktop{
-        padding:8% 8% 0% 8%;
+    @include desktop {
+        padding: 8% 8% 0% 8%;
     }
-    
-    p{
-        font-size:.8125rem;
+
+    p {
+        font-size: .8125rem;
         line-height: 1.125rem;
         font-weight: 400;
 
-        @include tablet{
+        @include tablet {
             font-size: .875rem;
             line-height: 1.375rem;
             font-weight: 400;
 
         }
     }
-    h2{
-        @include tablet{
+
+    h2 {
+        @include padding-bottom5;
+        @include tablet {
             padding: 16px 0;
         }
     }
-    
-    &__quote{
+
+    &__quote {
         padding-bottom: 5%;
         padding-top: 5%;
-        
-        & h3{
+
+        & h3 {
             padding: 0 0 3% 0;
         }
 
-        @include desktop{
+        @include desktop {
             padding-right: 22.0625rem;
         }
     }
 
 
-    &__text{
-        display:flex;
+    &__text {
+        display: flex;
 
-        &-column{
+        &-column {
             display: flex;
             padding: 0px 1.5rem;
             flex-direction: column;
-            
-            @include tablet{
-                padding:0px;
+
+            @include tablet {
+                padding: 0px;
             }
-        
-        }
-        }
-        
-        
-        & p{
-            padding: 4% 2.4375rem 4% 0;
 
         }
     }
-    
+
+
+    & p {
+        padding: 4% 2.4375rem 4% 0;
+
+    }
+}
+
 
 
 .gallery {
@@ -159,30 +164,31 @@ h3{
     background-color: $color-secondary-alabaster;
 
 
-    @include desktop{
-       padding: 5rem 3rem 0rem 3rem;
+    @include desktop {
+        padding: 5rem 3rem 0rem 3rem;
 
     }
 
-    & h2{
-        
-        @include tablet{
+    & h2 {
+
+        @include tablet {
             padding: 2.18rem 0rem 1rem 1rem;
         }
-        @include desktop{
+
+        @include desktop {
             padding-left: 2rem;
         }
     }
-    
+
     &__images {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
     }
-    
+
     &__image {
         margin: 2%;
-        background-color:$color-secondary-mercury;
+        background-color: $color-secondary-mercury;
         width: 96%;
 
         @include tablet {
@@ -192,75 +198,155 @@ h3{
     }
 }
 
-.convers{
+.convers {
 
-    &__title{
-        font-weight:600;
-        padding:0% 5% 5% 5%;
+    &__title {
+        font-weight: 600;
+        padding: 0% 5% 5% 5%;
 
     }
 }
 
-.form{
-    display:flex;
-    color:$color-primary-silver;
+.form {
+    display: flex;
+    color: $color-primary-silver;
     font-size: $p-size-mobil;
     justify-content: space-evenly;
+    margin: 0% 2%;
+    border-bottom: .0625rem $color-secondary-mercury solid;
+    @include padding-bottom5;
 
-    &__image{
+    &__image {
         border-radius: 50%;
-        width:2.25rem;
-        height:2.25rem;
+        width: 2.25rem;
+        height: 2.25rem;
     }
 
-    &__info-container{
+    &__info-container {
         display: flex;
         flex-direction: column;
 
-        
-        &-name{
+
+        &-name {
             display: flex;
             flex-direction: column;
+            padding-bottom: 5%;
 
-            &--input{
-                padding-bottom:4px;
-                color:$color-secondary-mercury;
-
-
+            & p {
+                padding-bottom: 2%;
             }
-        }
 
-        &-comment{
-            display: flex;
-            flex-direction: column;
-            
-        
-
-            &--textarea{
-                height: 2.25rem;
-                border-radius: 4px;
-                padding: .75rem;
-                border: 1px solid $secondary-mercury;
-                margin-bottom: 1rem;
+            &--input {
+                padding: .5rem 0;
+                color: $color-secondary-mercury;
                 width: 75vw;
+                border-color: $color-secondary-mercury;
+                background-color: $color-secondary-alabaster;
+                border-radius: .25rem;
+                border-width: .009rem;
+
+                &::placeholder {
+                    color: $color-primary-black;
+                    font-family: Avenir;
+                    padding: 2%;
+
+
+                }
+
+            }
+        }
+
+        &-comment {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 5%;
+
+            & p {
+                padding-bottom: 2%;
+            }
+
+            &--textarea {
+                color: $color-secondary-mercury;
+                width: 75vw;
+                border-color: $color-secondary-mercury;
+                border-radius: .25rem;
+                background-color: $color-secondary-alabaster;
+                height: 8rem;
+
+                &::placeholder {
+                    color: $color-primary-black;
+                    padding: .5rem;
+                    font-family: Avenir;
+                }
             }
 
         }
 
-    
     }
 
+    &__button {
+        background-color: $color-primary-black;
+        color: $color-primary-white;
+        border: none;
+        height: 2.5rem;
+        width: 100%;
+        border-radius: 4px;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        line-height: .625rem;
+
+        &:hoover{
+            background-color: $color-secondary-darkblack;
+
+        }
+    }
+}
+
+.comments{
     
+    margin: 0% 2%;
+}
+.comment{
+    border-bottom: .0625rem $color-secondary-mercury solid;
+    display:flex;
+    flex-direction: row;
+    padding: 4% 1%;
+
+    &__image{
+        border-radius: 50%;
+        width: 7.25rem;
+        height: 2.25rem;
+        color:transparent;
+        background-color:$color-secondary-mercury;
+        border:none;
+
+        &::before {
+            content: "Image not found";
+            display: block;
+            text-align: center;
+            border-radius: 50%;
+ 
+          }
     }
 
-textarea.form__info-container-comment--textarea{
+    &__section{
+        padding-left: 5%;
+    }
 
+    &__title{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 2%;
+    }
 
-    height: 2.25rem;
-    border-radius: 4px;
-    padding: .75rem;
-    border: 1px solid $secondary-mercury;
-    margin-bottom: 1rem;
-    width: 75vw;
+    &__name{
+        font-weight: 600;
+    }
 
+    &__date{
+        color:$color-primary-silver
+        ;
+    }
 }
