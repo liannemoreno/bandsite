@@ -102,6 +102,23 @@ for (let i=0; i< showList.length; i++){
 
 }
     
+const visibleHeader =document.querySelectorAll("shows__main-location--word");
+for (let i=0; showList.length; i++){
+    const subheaderLocation =alwaysVisible[i];
+    subheaderLocation.style.display='unset';
+};
+
+const showsSec = document.querySelectorAll(".shows__main");
+
+showsSec.forEach(event => {
+    event.addEventLisner('click',() =>{
+        showsSec.forEach(sec=>{
+            sec.classList.remove('select');
+        });
+
+        showsSec.classList.toggle('select');
+    });
+})
 
   
 

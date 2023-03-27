@@ -37,17 +37,22 @@
     & iframe{
         padding: 7% 5% 8% 5%;
         
+        @include tablet{
+            padding: 5% 47% 1% 5%;
+        }
+
     }
     
     }
     &__main--title{
-        padding: 2% 20% 0% 5%;;
+        padding: 2% 20% 0% 5%;
         position:relative;
         z-index:1;
         font-weight:600;
 
         @include tablet{
-            padding: 26% 0% 0% 5%;
+            font-size: 57px;
+            padding: 0% 20% 0% 5%;
         }
     }
 
@@ -56,20 +61,43 @@
         font-size: 1.2rem;
         position: relative;
         padding: 10% 0% 5% 5%;
+        
+        @include tablet{
+            font-size: 27px;
+            padding: 6% 0% 4% 5%;
+            font-weight: 600;
+        }
+
     }
 
 }
 
 .shows{
 
+    
+
     &__title{
         padding: 8% 5% 0 5%;
         font-weight:600;
+
+        @include tablet{
+            padding-bottom:5%;
+        }
     }
 
     &__main{
         padding: 8% 0 8% 0;
         border-bottom: .0625rem $color-secondary-mercury solid;
+
+        & .select{
+            background-color: $color-secondary-mercury;
+        }
+
+        @include tablet{
+            display: flex;
+            padding:2% 0 0 0;
+            justify-content: space-between;
+        }
         &-date{
             @include padding-bottom5;
             @include padding-sides;
@@ -86,6 +114,7 @@
 
 
         }
+    
 
         &-venue, &-location{
             @include padding-bottom5;
@@ -118,6 +147,12 @@
 
                 &:hoover{
                     background-color: $color-secondary-darkblack;
+
+                }
+
+                @include tablet{
+                    padding:0 1.5rem;
+
 
                 }
             }

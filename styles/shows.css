@@ -355,6 +355,11 @@ footer h2 {
 .hero__main iframe {
   padding: 7% 5% 8% 5%;
 }
+@media screen and (min-width: 768px) {
+  .hero__main iframe {
+    padding: 5% 47% 1% 5%;
+  }
+}
 .hero__main--title {
   padding: 2% 20% 0% 5%;
   position: relative;
@@ -363,7 +368,8 @@ footer h2 {
 }
 @media screen and (min-width: 768px) {
   .hero__main--title {
-    padding: 26% 0% 0% 5%;
+    font-size: 57px;
+    padding: 0% 20% 0% 5%;
   }
 }
 .hero__main--subtitle {
@@ -372,14 +378,36 @@ footer h2 {
   position: relative;
   padding: 10% 0% 5% 5%;
 }
+@media screen and (min-width: 768px) {
+  .hero__main--subtitle {
+    font-size: 27px;
+    padding: 6% 0% 4% 5%;
+    font-weight: 600;
+  }
+}
 
 .shows__title {
   padding: 8% 5% 0 5%;
   font-weight: 600;
 }
+@media screen and (min-width: 768px) {
+  .shows__title {
+    padding-bottom: 5%;
+  }
+}
 .shows__main {
   padding: 8% 0 8% 0;
   border-bottom: 0.0625rem #E1E1E1 solid;
+}
+.shows__main .select {
+  background-color: #E1E1E1;
+}
+@media screen and (min-width: 768px) {
+  .shows__main {
+    display: flex;
+    padding: 2% 0 0 0;
+    justify-content: space-between;
+  }
 }
 .shows__main-date {
   padding-bottom: 5%;
@@ -426,4 +454,9 @@ footer h2 {
 }
 .shows__main-button--style:hoover {
   background-color: #000000;
+}
+@media screen and (min-width: 768px) {
+  .shows__main-button--style {
+    padding: 0 1.5rem;
+  }
 }/*# sourceMappingURL=shows.css.map */
