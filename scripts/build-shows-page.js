@@ -1,124 +1,141 @@
-const showList =[
-{
-    date:"Mon Sept 06 2021",
-    venue:"Ronald Lane",
-    location: "San Francisco, CA",
-},
-{
-    date:"Tue Sept 21 2021",
-    venue:"Pier 3 East",
-    location: "San Francisco, CA",
-},
-{
-    date:"Fri Oct 15 2021",
-    venue:"View Lounge",
-    location: "San Francisco, CA",
-},
-{
-    date:"Sat Nov 06 2021",
-    venue:"Hyatt Agency",
-    location: "San Francisco, CA",
-},
-{
-    date:"Fri Nov 26 2021",
-    venue:"Moscow Center",
-    location: "San Francisco, CA",
-},
-{
-    date:"Wed Dec 15 2021",
-    venue:"Press Club",
-    location: "San Francisco, CA",
-},
+const showList = [
+    {
+        date: "Mon Sept 06 2021",
+        venue: "Ronald Lane",
+        location: "San Francisco, CA",
+    },
+    {
+        date: "Tue Sept 21 2021",
+        venue: "Pier 3 East",
+        location: "San Francisco, CA",
+    },
+    {
+        date: "Fri Oct 15 2021",
+        venue: "View Lounge",
+        location: "San Francisco, CA",
+    },
+    {
+        date: "Sat Nov 06 2021",
+        venue: "Hyatt Agency",
+        location: "San Francisco, CA",
+    },
+    {
+        date: "Fri Nov 26 2021",
+        venue: "Moscow Center",
+        location: "San Francisco, CA",
+    },
+    {
+        date: "Wed Dec 15 2021",
+        venue: "Press Club",
+        location: "San Francisco, CA",
+    },
 ];
 
-const mainSection=document.querySelector("main");
-const showsSection = document.createElement("section");
-mainSection.appendChild(showsSection);
-showsSection.classList.add("shows");
-const showTitle=document.createElement("h2");
-showsSection.appendChild(showTitle);
-showTitle.classList.add("shows__title");
-showTitle.innerText= "Shows";
 
-for (let i=0; i< showList.length; i++){
-    const showsDetails = document.createElement("div");
-    showsSection.appendChild(showsDetails);
-    showsDetails.classList.add("shows__main");
 
-    const dateDiv= document.createElement("div");
-    showsDetails.appendChild(dateDiv);
+const showsSection = document.querySelector(".shows");
+const headerContainer = document.createElement("div");
+headerContainer.classList.add("shows__header");
+showsSection.appendChild(headerContainer);
+const showTitle = document.createElement("h2");
+headerContainer.appendChild(showTitle);
+showTitle.classList.add("shows__header--title");
+showTitle.innerText = "Shows";
 
-    dateDiv.classList.add("shows__main-date");
-
-    const date= document.createElement("p");
-    dateDiv.appendChild(date);
-    date.classList.add("shows__main-date--word");
-    date.innerText="DATE";
+for (let i = 0; i < showList.length; i++) {
+    const showsDiv = document.createElement("div");
+    // showsDiv.addEventListener('click',selectedHandler);
+    showsSection.appendChild(showsDiv);
+    showsDiv.classList.add("shows__container");
+    console.log(showsDiv);
+    
+    const subtitleDate = document.createElement("p");
+    showsDiv.appendChild(subtitleDate);
+    subtitleDate.classList.add("shows__container--subtitle");
+    subtitleDate.innerText = "DATE";
     
 
-    const dateDetails= document.createElement("p");
-    dateDiv.appendChild(dateDetails);
-    dateDetails.classList.add("shows__main-date--detail");
-    dateDetails.innerText=showList[i].date;
+    const dateDetails = document.createElement("p");
+    showsDiv.appendChild(dateDetails);
+    dateDetails.classList.add("shows__container--detail--bold");
+    dateDetails.innerText = showList[i].date;
+
+    const subtitleVenue = document.createElement("p");
+    showsDiv.appendChild(subtitleVenue);
+    subtitleVenue.classList.add("shows__container--subtitle");
+    subtitleVenue.innerText = "VENUE";
+   
+
+    const venueDetails = document.createElement("p");
+    showsDiv.appendChild(venueDetails);
+    venueDetails.classList.add("shows__container--detail");
+    venueDetails.innerText = showList[i].venue;
+
+    const subtitleLocation = document.createElement("p");
+    showsDiv.appendChild(subtitleLocation);
+    subtitleLocation.classList.add("shows__container--subtitle");
+    subtitleLocation.innerText = "LOCATION";
     
 
-    const venueDiv= document.createElement("div");
-    showsDetails.appendChild(venueDiv);
-    venueDiv.classList.add("shows__main-venue");
+    const locationDetails = document.createElement("p");
+    showsDiv.appendChild(locationDetails);
+    locationDetails.classList.add("shows__container--detail");
+    locationDetails.innerText = showList[i].location;
 
-    const venue= document.createElement("p");
-    venueDiv.appendChild(venue);
-    venue.classList.add("shows__main-venue--word");
-    venue.innerText="VENUE";
-
-    const venueDetails= document.createElement("p");
-    venueDiv.appendChild(venueDetails);
-    venueDetails.classList.add("shows__main-venue--detail");
-    venueDetails.innerText=showList[i].venue;
-
-
-    const locationDiv= document.createElement("div");
-    showsDetails.appendChild(locationDiv);
-
-    locationDiv.classList.add("shows__main-location");
-
-    const location= document.createElement("p");
-    locationDiv.appendChild(location);
-    location.classList.add("shows__main-location--word");
-    location.innerText="LOCATION";
-
-    const locationDetails= document.createElement("p");
-    locationDiv.appendChild(locationDetails);
-    locationDetails.classList.add("shows__main-location--detail");
-    locationDetails.innerText=showList[i].location;
-
-    const buttonWrap= document.createElement("div");
-    buttonWrap.classList.add("shows__main-button");
-    showsDetails.appendChild(buttonWrap);
-    const buyButton= document.createElement("button");
+    const buttonWrap = document.createElement("div");
+    buttonWrap.classList.add("shows__container--button");
+    showsDiv.appendChild(buttonWrap);
+    const buyButton = document.createElement("button");
     buttonWrap.appendChild(buyButton);
-    buyButton.classList.add("shows__main-button--style");
-    buyButton.innerText="BUY TICKETS";
+    buyButton.classList.add("shows__container--button--style");
+    buyButton.innerText = "BUY TICKETS";
 
 }
-    
-const visibleHeader =document.querySelectorAll("shows__main-location--word");
-for (let i=0; showList.length; i++){
-    const subheaderLocation =alwaysVisible[i];
-    subheaderLocation.style.display='unset';
-};
 
-const showsSec = document.querySelectorAll(".shows__main");
 
-showsSec.forEach(event => {
-    showsSec.addEventLisner('click',() =>{
-        showsSec.forEach(sec=>{
-            sec.classList.remove('select');
-        });
+const showsSec = document.querySelectorAll(".shows__container");
+for (let i = 0;  i < showsSec.length; i++){
+    let oneShow = showsSec[i];
+    oneShow.addEventListener("click",selectState);
+}
 
-        showsSec.classList.toggle('select');
-    });
-})
 
-  
+function selectState(e){
+    for (let shows of showsSec){
+        shows.style.backgroundColor="initial";
 
+    }
+
+    e.currentTarget.style.backgroundColor='#E1E1E1';
+}
+
+
+for (let i = 0;  i < showsSec.length; i++){
+    let show = showsSec[i];
+    show.addEventListener("mouseover",hoverState);
+}
+
+
+function hoverState(e){
+    for (let shows1 of showsSec){
+        shows1.style.backgroundColor="initial";
+
+    }
+
+    e.currentTarget.style.backgroundColor='#FAFAFA';
+}
+
+for (let i = 0;  i < showsSec.length; i++){
+    let show2 = showsSec[i];
+    show2.addEventListener("mouseout",unHoverState);
+}
+
+
+function unHoverState(e){
+    for (let shows3 of showsSec){
+        shows3.style.backgroundColor="initial";
+
+    }
+
+    e.currentTarget.style.backgroundColor='#ffffff';
+}

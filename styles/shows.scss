@@ -100,8 +100,12 @@
         padding: 8% 0 8% 0;
         border-bottom: .0625rem $color-secondary-mercury solid;
 
-        & .select{
-            background-color: $color-secondary-mercury;
+        &:active {
+            background-color: red;
+        }
+
+        &--selected{
+            background-color:red;
         }
 
         @include tablet{
