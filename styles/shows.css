@@ -411,8 +411,11 @@ footer h2 {
   padding: 8% 0 8% 0;
   border-bottom: 0.0625rem #E1E1E1 solid;
 }
-.shows__main .select {
-  background-color: #E1E1E1;
+.shows__main:active {
+  background-color: red;
+}
+.shows__main--selected {
+  background-color: red;
 }
 @media screen and (min-width: 768px) {
   .shows__main {

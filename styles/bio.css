@@ -678,13 +678,13 @@ h3 {
   }
 }
 
-.comment {
+.post {
   border-bottom: 0.0625rem #E1E1E1 solid;
   display: flex;
   flex-direction: row;
   padding: 4% 1%;
 }
-.comment__image {
+.post__image {
   border-radius: 50%;
   width: 7.5rem;
   height: 2.25rem;
@@ -693,29 +693,29 @@ h3 {
   border: none;
 }
 @media screen and (min-width: 768px) {
-  .comment__image {
+  .post__image {
     height: 3rem;
     width: 8rem;
   }
 }
-.comment__image::before {
+.post__image::before {
   content: "Image not found";
   display: block;
   text-align: center;
   border-radius: 50%;
 }
-.comment__section {
+.post__text {
   padding-left: 5%;
 }
-.comment__title {
+.post__title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 2%;
 }
-.comment__name {
+.post__name {
   font-weight: 600;
 }
-.comment__date {
+.post__date {
   color: #afafaf;
 }/*# sourceMappingURL=bio.css.map */

@@ -378,7 +378,7 @@ h3 {
         margin: 0 23%;
     }
 }
-.comment{
+.post{
     border-bottom: .0625rem $color-secondary-mercury solid;
     display:flex;
     flex-direction: row;
@@ -408,7 +408,7 @@ h3 {
           }
     }
 
-    &__section{
+    &__text{
         padding-left: 5%;
     }
 
