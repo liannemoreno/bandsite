@@ -39,16 +39,16 @@
             padding: 7% 5% 8% 5%;
 
             @include tablet {
-                padding: 5% 47% 1% 5%;
+                padding: 3% 47% 3% 5%;
             }
 
             @include desktop {
                 display: flex;
                 flex-direction: row;
                 align-items: flex-end;
-                padding:0%;
-                width:50%;
-                height:99%;
+                padding: 0%;
+                width: 50%;
+                height: 99%;
             }
 
 
@@ -61,7 +61,7 @@
             }
         }
 
-        @include desktop{
+        @include desktop {
             display: flex;
             flex-direction: row;
             align-items: flex-end;
@@ -118,7 +118,7 @@
             font-weight: 600;
             font-size: 25px;
 
-            @include desktop{
+            @include desktop {
                 padding: 5% 5% 0% 5%;
                 font-weight: 600;
                 font-size: 46px;
@@ -213,21 +213,7 @@
                 @include padding-sides;
             }
 
-            // &--word{
-            //     @include shows-word;
-
-            //     }
-
-            //  &--detail {
-            //     @include shows-detail;
-            //     font-weight:600;
-            //     }
-
-
         }
-
-
-
 
 
         &--button {

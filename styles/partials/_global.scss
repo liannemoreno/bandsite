@@ -2,84 +2,80 @@
 @use './mixins' as *;
 @use './variables' as *;
 
-*{
+* {
     box-sizing: border-box;
-    padding:0;
-    margin:0;
-   
+    padding: 0;
+    margin: 0;
+
 }
 
-body{
+body {
     font-family: 'Avenir';
 }
 
-h1{
-    font-size:1.5rem;
+h1 {
+    font-size: 1.5rem;
     line-height: 2rem;
-    font-weight:700;
+    font-weight: 700;
 
-    @include tablet{
-        font-size:3.75rem;
+    @include tablet {
+        font-size: 3.75rem;
         line-height: 4.25rem;
-        font-weight:700;
+        font-weight: 700;
     }
 }
 
-h2{
-    font-size:1.5rem;
+h2 {
+    font-size: 1.5rem;
     line-height: 2rem;
-    font-weight:700;
+    font-weight: 700;
 
-    @include tablet{
-        font-size:2.25rem;
+    @include tablet {
+        font-size: 2.25rem;
         line-height: 2.75rem;
-        font-weight:700;
+        font-weight: 700;
     }
 
 }
 
-h3{
+h3 {
 
-    font-size:.875rem;
+    font-size: .875rem;
     line-height: 1.375rem;
-    font-weight:600;
+    font-weight: 600;
 
-    @include tablet{
-        font-size:1.5rem;
+    @include tablet {
+        font-size: 1.5rem;
         line-height: 2rem;
         font-weight: 600;
     }
 }
 
-.header{
+.header {
     background-color: $color-primary-black;
-    
+
 }
 
 .nav {
     display: flex;
     align-items: center;
     flex-direction: column;
-    
-    
+
+
 
     @include tablet {
         flex-direction: row;
-    }   
-
-    @include desktop {
-        flex-direction: row;
         padding: 1% 0%;
     }
-    
 
-    &__logo{
+
+    &__logo {
         padding: 1rem 0;
 
-        img{
+        img {
             height: 2.5rem;
 
-            @include tablet{
+            @include tablet {
                 height: 1.875rem;
 
             }
@@ -87,13 +83,9 @@ h3{
 
         @include tablet {
             margin-right: 1.875rem;
-            padding: 1.25rem 1.875rem 1.25rem;
-        }  
-        
-        @include desktop{
-            margin-right: 1.875rem;
             padding: 1.25rem 1.875rem 1.25rem 6rem;
         }
+
     }
 
     &__links {
@@ -101,99 +93,101 @@ h3{
         width: 100%;
         justify-content: space-between;
         list-style-type: none;
-            
+
         @include tablet {
-          justify-content: flex-start;
-        }   
-        
+            justify-content: flex-start;
+        }
+
         @include desktop {
             justify-content: unset;
         }
-        
-    
+
+
     }
 
- 
-    
+
+
     ul {
         width: 100%;
         text-align: center;
-        padding: .625rem 0 0 0 ;
-        
+        padding: .625rem 0 0 0;
+
         @include tablet {
             padding: 1.875rem 0rem 1.625rem;
             width: auto;
-          } 
-          
-        @include desktop{
+        }
+
+        @include desktop {
             padding: 1.875rem 1rem 1.625rem;
             width: auto;
-          }
+        }
 
     }
 
     &__item {
-        width:50%;
+        width: 50%;
 
-        @include tablet{
+        @include tablet {
             padding-left: 3.125rem;
 
-            .active{
+            .active {
                 border-bottom: .3125rem solid $color-primary-white;
             }
 
         }
     }
-    .active{
+
+    .active {
         border-bottom: .3125rem solid $color-primary-white;
         font-weight: 600;
 
-        @include tablet{
-            border-bottom:none;
+        @include tablet {
+            border-bottom: none;
         }
     }
 
     &__link {
-        text-decoration:none;
+        text-decoration: none;
         color: $color-secondary-mercury;
 
-        &.active2{
-            @include tablet{
-                padding-bottom:1.2rem;
+        &.active2 {
+            @include tablet {
+                padding-bottom: 1.875rem;
                 color: $color-primary-white;
-                border-bottom:.35rem solid $color-primary-white;
+                border-bottom: .38rem solid $color-primary-white;
             }
 
-            @include desktop{
-                padding-bottom:2rem;
+            @include desktop {
+                padding-bottom: 2.3rem;
                 color: $color-primary-white;
-                border-bottom:.4rem solid $color-primary-white;
-                
+                border-bottom: .35rem solid $color-primary-white;
+
             }
-        }    
-        &:hover{
-            width:50%;
+        }
+
+        &:hover {
+            width: 50%;
             transition: border-bottom .5s;
             color: $color-primary-white;
-            border-bottom: .3125rem solid $color-primary-white;
-            font-weight:400;
+            border-bottom: .38rem solid $color-primary-white;
+            font-weight: 400;
 
-            @include tablet{
-                padding-bottom:1.2rem;
+            @include tablet {
+                padding-bottom: 1.875rem;
             }
 
-            @include desktop{
-                padding-bottom:2rem;
-                border-bottom: .4rem solid $color-primary-white;
+            @include desktop {
+                padding-bottom: 2.3rem;
+                border-bottom: .35rem solid $color-primary-white;
             }
         }
 
     }
 
-    
+
 }
 
-footer{
+footer {
     background-color: $color-primary-black;
     color: $color-primary-white;
     display: flex;
@@ -201,58 +195,61 @@ footer{
     padding: 5%;
     margin-top: 5%;
 
-    @include desktop{
-        padding: 5% 5% 2% 5%;;
+    @include desktop {
+        padding: 5% 5% 2% 5%;
+        ;
     }
-    p{
-        font-size:.8125rem;
+
+    p {
+        font-size: .8125rem;
         line-height: 1.125rem;
 
-        @include tablet{
+        @include tablet {
             font-size: .875rem;
             line-height: 1.25rem;
 
         }
     }
-    
-    h2{
+
+    h2 {
         font-weight: 600;
     }
-    
+
 
 }
 
 
 
-.footer{
+.footer {
     &__heading {
-        
-        @include tablet{
-            display:flex;
+
+        @include tablet {
+            display: flex;
             padding-left: 1rem;
             align-items: baseline;
         }
 
-        &-social{
+        &-social {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             padding: 3% 52% 0% 0%;
 
-            @include tablet{
+            @include tablet {
                 justify-content: revert;
                 padding: 0% 0% 0% 1rem;
             }
 
-            @include desktop{
+            @include desktop {
                 padding: 0% 0% 0% 2.25rem;
             }
 
-            &-icon{
-                @include tablet{
+            &-icon {
+                @include tablet {
                     padding: 0 .625rem;
                     margin: 0 .625rem;
-                    img{
+
+                    img {
                         height: 1.875rem;
                     }
                 }
@@ -260,71 +257,72 @@ footer{
         }
     }
 
-    &__management{
-        padding: .5rem .5rem 4rem 0;    
-        
-        @include tablet{
+    &__management {
+        padding: .5rem .5rem 4rem 0;
+
+        @include tablet {
             display: flex;
             justify-content: space-between;
             padding: .5rem .5rem 3.5rem 0;
         }
 
-        @include desktop{
+        @include desktop {
             justify-content: revert;
         }
-        &-info{
+
+        &-info {
             padding: .5rem 0 .5rem 0;
 
-            @include tablet{
+            @include tablet {
                 padding: 0 1rem;
                 width: 30%;
             }
         }
 
-        &-name{
-            padding: .5rem 0; 
+        &-name {
+            padding: .5rem 0;
             font-weight: 600;
 
-            @include tablet{
+            @include tablet {
                 padding: 1rem 0;
             }
         }
 
-        &-location{
+        &-location {
             padding: .5rem 0;
 
-            @include tablet{
+            @include tablet {
                 padding: 1rem 0;
             }
         }
 
-        &-email{
+        &-email {
             padding: .5rem 0 1rem 0;
 
-            @include tablet{
+            @include tablet {
                 padding: 1rem 0;
             }
         }
-        
+
     }
 
-    &__logo1{
+    &__logo1 {
         display: none;
 
-        @include tablet{
-            display:flex;
+        @include tablet {
+            display: flex;
             width: 16%;
-            margin-left:auto;
+            margin-left: auto;
         }
 
     }
 
-    &__logo2{
+    &__logo2 {
         padding: 0 0 1rem 0;
-        width:30%;
+        width: 30%;
 
-        @include tablet{
-            display:none;
+        @include tablet {
+            display: none;
         }
 
     }
@@ -333,9 +331,8 @@ footer{
         padding: .5rem 0 1rem 0;
         font-weight: 600;
 
-        @include tablet{
+        @include tablet {
             margin-left: 1rem;
         }
     }
 }
-

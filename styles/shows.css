@@ -74,11 +74,6 @@ h3 {
 @media screen and (min-width: 768px) {
   .nav {
     flex-direction: row;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .nav {
-    flex-direction: row;
     padding: 1% 0%;
   }
 }
@@ -94,12 +89,6 @@ h3 {
   }
 }
 @media screen and (min-width: 768px) {
-  .nav__logo {
-    margin-right: 1.875rem;
-    padding: 1.25rem 1.875rem 1.25rem;
-  }
-}
-@media screen and (min-width: 1280px) {
   .nav__logo {
     margin-right: 1.875rem;
     padding: 1.25rem 1.875rem 1.25rem 6rem;
@@ -164,34 +153,34 @@ h3 {
 }
 @media screen and (min-width: 768px) {
   .nav__link.active2 {
-    padding-bottom: 1.2rem;
+    padding-bottom: 1.875rem;
     color: #ffffff;
-    border-bottom: 0.35rem solid #ffffff;
+    border-bottom: 0.38rem solid #ffffff;
   }
 }
 @media screen and (min-width: 1280px) {
   .nav__link.active2 {
-    padding-bottom: 2rem;
+    padding-bottom: 2.3rem;
     color: #ffffff;
-    border-bottom: 0.4rem solid #ffffff;
+    border-bottom: 0.35rem solid #ffffff;
   }
 }
 .nav__link:hover {
   width: 50%;
   transition: border-bottom 0.5s;
   color: #ffffff;
-  border-bottom: 0.3125rem solid #ffffff;
+  border-bottom: 0.38rem solid #ffffff;
   font-weight: 400;
 }
 @media screen and (min-width: 768px) {
   .nav__link:hover {
-    padding-bottom: 1.2rem;
+    padding-bottom: 1.875rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .nav__link:hover {
-    padding-bottom: 2rem;
-    border-bottom: 0.4rem solid #ffffff;
+    padding-bottom: 2.3rem;
+    border-bottom: 0.35rem solid #ffffff;
   }
 }
 
@@ -370,7 +359,7 @@ footer h2 {
 }
 @media screen and (min-width: 768px) {
   .hero__main iframe {
-    padding: 5% 47% 1% 5%;
+    padding: 3% 47% 3% 5%;
   }
 }
 @media screen and (min-width: 1280px) {
