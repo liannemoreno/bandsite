@@ -160,9 +160,9 @@ h3 {
 }
 @media screen and (min-width: 1280px) {
   .nav__link.active2 {
-    padding-bottom: 2.3rem;
+    padding-bottom: 2.23rem;
     color: #ffffff;
-    border-bottom: 0.35rem solid #ffffff;
+    border-bottom: 0.38rem solid #ffffff;
   }
 }
 .nav__link:hover {
@@ -179,8 +179,8 @@ h3 {
 }
 @media screen and (min-width: 1280px) {
   .nav__link:hover {
-    padding-bottom: 2.3rem;
-    border-bottom: 0.35rem solid #ffffff;
+    padding-bottom: 2.23rem;
+    border-bottom: 0.38rem solid #ffffff;
   }
 }
 

@@ -158,9 +158,9 @@ h3 {
             }
 
             @include desktop {
-                padding-bottom: 2.3rem;
+                padding-bottom: 2.23rem;
                 color: $color-primary-white;
-                border-bottom: .35rem solid $color-primary-white;
+                border-bottom: .38rem solid $color-primary-white;
 
             }
         }
@@ -177,8 +177,8 @@ h3 {
             }
 
             @include desktop {
-                padding-bottom: 2.3rem;
-                border-bottom: .35rem solid $color-primary-white;
+                padding-bottom: 2.23rem;
+                border-bottom: .38rem solid $color-primary-white;
             }
         }
 
