@@ -60,7 +60,7 @@ h3{
     display: flex;
     align-items: center;
     flex-direction: column;
-    color: $color-primary-white;
+    
     
 
     @include tablet {
@@ -155,13 +155,20 @@ h3{
 
     &__link {
         text-decoration:none;
-        color: $color-primary-white;
+        color: $color-secondary-mercury;
 
         &.active2{
             @include tablet{
-                padding-bottom:1rem;
+                padding-bottom:1.2rem;
                 color: $color-primary-white;
-                border-bottom: .3125rem solid $color-primary-white;
+                border-bottom:.35rem solid $color-primary-white;
+            }
+
+            @include desktop{
+                padding-bottom:2rem;
+                color: $color-primary-white;
+                border-bottom:.4rem solid $color-primary-white;
+                
             }
         }    
         &:hover{
@@ -172,7 +179,12 @@ h3{
             font-weight:400;
 
             @include tablet{
-                padding-bottom:1rem;
+                padding-bottom:1.2rem;
+            }
+
+            @include desktop{
+                padding-bottom:2rem;
+                border-bottom: .4rem solid $color-primary-white;
             }
         }
 
