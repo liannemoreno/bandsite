@@ -80,6 +80,7 @@ h3 {
 @media screen and (min-width: 1280px) {
   .nav {
     flex-direction: row;
+    padding: 1% 0%;
   }
 }
 .nav__logo {
@@ -364,12 +365,27 @@ footer h2 {
   .hero__main iframe {
     display: flex;
     flex-direction: row;
+    align-items: flex-end;
+    padding: 0%;
+    width: 50%;
+    height: 99%;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__main--header {
     display: flex;
     flex-direction: column;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__main {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    align-content: center;
+    padding-top: 14%;
+    padding-left: 6%;
+    padding-right: 15%;
   }
 }
 .hero__main--title {
@@ -398,64 +414,111 @@ footer h2 {
   }
 }
 
-.shows__title {
-  padding: 8% 5% 0 5%;
-  font-weight: 600;
-}
-@media screen and (min-width: 768px) {
-  .shows__title {
-    padding-bottom: 5%;
+@media screen and (min-width: 1280px) {
+  .shows__section {
+    padding: 0% 13% 0% 25%;
   }
 }
-.shows__main {
-  padding: 8% 0 8% 0;
-  border-bottom: 0.0625rem #E1E1E1 solid;
+@media screen and (max-width: 768px) {
+  .shows__hidden {
+    display: none;
+  }
 }
-.shows__main:active {
-  background-color: red;
+.shows__hidden--title {
+  padding: 5% 5% 3% 5%;
+  font-weight: 600;
+  font-size: 25px;
 }
-.shows__main--selected {
-  background-color: red;
+@media screen and (min-width: 1280px) {
+  .shows__hidden--title {
+    padding: 5% 5% 0% 5%;
+    font-weight: 600;
+    font-size: 46px;
+  }
+}
+.shows__hidden--subtitles {
+  display: flex;
+  flex-direction: row;
+  color: #afafaf;
+  font-size: 14px;
+  flex-wrap: wrap;
+  padding: 0% 33% 2% 10px;
+  justify-content: space-around;
+}
+.shows__hidden--subtitles-date {
+  padding-right: 26%;
+}
+.shows__hidden--subtitles-venue {
+  padding-right: 16%;
+}
+@media screen and (min-width: 1280px) {
+  .shows__hidden--subtitles {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    color: #afafaf;
+    font-size: 14px;
+    flex-wrap: wrap;
+    padding: 0% 26% 2% 17.5%;
+  }
+}
+.shows__header {
+  padding: 8% 5% 0 5%;
 }
 @media screen and (min-width: 768px) {
-  .shows__main {
+  .shows__header {
+    display: none;
+  }
+}
+.shows__header--title {
+  font-weight: 600;
+  font-size: 25px;
+}
+@media screen and (min-width: 768px) {
+  .shows__header--title {
+    display: none;
+  }
+}
+.shows__container {
+  padding: 6% 0 8% 0;
+  border-bottom: 0.0625rem #E1E1E1 solid;
+}
+@media screen and (min-width: 768px) {
+  .shows__container {
     display: flex;
     padding: 2% 0 0 0;
     justify-content: space-between;
   }
 }
-.shows__main-date {
+.shows__container--subtitle {
+  padding-bottom: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: #afafaf;
+  font-size: 13px;
+}
+@media screen and (min-width: 768px) {
+  .shows__container--subtitle {
+    display: none;
+  }
+}
+.shows__container--detail {
+  font-size: 14px;
   padding-bottom: 5%;
   padding-left: 5%;
   padding-right: 5%;
 }
-.shows__main-date--word {
-  color: #afafaf;
-  font-size: 0.8125rem;
-  padding-bottom: 2%;
-}
-.shows__main-date--detail {
-  font-size: 0.875rem;
+.shows__container--detail--bold {
   font-weight: 600;
-}
-.shows__main-venue, .shows__main-location {
   padding-bottom: 5%;
   padding-left: 5%;
   padding-right: 5%;
 }
-.shows__main-venue--word, .shows__main-location--word {
-  color: #afafaf;
-  font-size: 0.8125rem;
-  padding-bottom: 2%;
-}
-.shows__main-venue--detail, .shows__main-location--detail {
-  font-size: 0.875rem;
-}
-.shows__main-button {
+.shows__container--button {
   padding-left: 5%;
   padding-right: 5%;
 }
-.shows__main-button--style {
+.shows__container--button--style {
   background-color: #323232;
   color: #ffffff;
   border: none;
@@ -467,11 +530,11 @@ footer h2 {
   text-align: center;
   line-height: 0.625rem;
 }
-.shows__main-button--style:hoover {
+.shows__container--button--style:hoover {
   background-color: #000000;
 }
 @media screen and (min-width: 768px) {
-  .shows__main-button--style {
+  .shows__container--button--style {
     padding: 0 1.5rem;
   }
 }/*# sourceMappingURL=shows.css.map */

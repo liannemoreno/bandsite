@@ -63,7 +63,6 @@ function displayShows(){
             buyButton.classList.add("shows__container--button--style");
             buyButton.innerText = "BUY TICKETS";
         });
-        // Add event listeners after all shows are displayed
         const showsSec = document.querySelectorAll(".shows__container");
         for (let i = 0;  i < showsSec.length; i++){
             let oneShow = showsSec[i];

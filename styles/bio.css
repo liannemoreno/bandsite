@@ -80,6 +80,7 @@ h3 {
 @media screen and (min-width: 1280px) {
   .nav {
     flex-direction: row;
+    padding: 1% 0%;
   }
 }
 .nav__logo {
