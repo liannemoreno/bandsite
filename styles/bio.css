@@ -568,23 +568,27 @@ h3 {
   padding-bottom: 2%;
 }
 .form__info-container-name--input {
-  padding: 0.5rem 0;
-  color: #E1E1E1;
+  padding: 0.5rem 1rem;
+  color: #323232;
   width: 75vw;
   border-color: #E1E1E1;
   background-color: #FAFAFA;
   border-radius: 0.25rem;
   border-width: 0.009rem;
+  font-family: Avenir;
+}
+.form__info-container-name--input:active {
+  border-color: #323232;
 }
 .form__info-container-name--input::-moz-placeholder {
   color: #323232;
   font-family: Avenir;
-  padding: 2%;
+  padding: 1%;
 }
 .form__info-container-name--input::placeholder {
   color: #323232;
   font-family: Avenir;
-  padding: 2%;
+  padding: 1%;
 }
 @media screen and (min-width: 768px) {
   .form__info-container-name--input {
@@ -605,21 +609,24 @@ h3 {
   padding-bottom: 2%;
 }
 .form__info-container-comment--textarea {
-  color: #E1E1E1;
+  color: #323232;
   width: 75vw;
   border-color: #E1E1E1;
   border-radius: 0.25rem;
   background-color: #FAFAFA;
   height: 8rem;
+  font-family: Avenir;
+  padding: 2% 3%;
+}
+.form__info-container-comment--textarea:active {
+  border-color: #323232;
 }
 .form__info-container-comment--textarea::-moz-placeholder {
   color: #323232;
-  padding: 0.5rem;
   font-family: Avenir;
 }
 .form__info-container-comment--textarea::placeholder {
   color: #323232;
-  padding: 0.5rem;
   font-family: Avenir;
 }
 @media screen and (min-width: 768px) {

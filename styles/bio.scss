@@ -268,18 +268,24 @@ h3 {
             }
 
             &--input {
-                padding: .5rem 0;
-                color: $color-secondary-mercury;
+                padding: .5rem 1rem;
+                color: $color-primary-black;
                 width: 75vw;
                 border-color: $color-secondary-mercury;
                 background-color: $color-secondary-alabaster;
                 border-radius: .25rem;
                 border-width: .009rem;
-               
+                font-family: Avenir;
+
+                &:active{
+                    border-color: $color-primary-black;
+
+                }
+
                 &::placeholder {
                     color: $color-primary-black;
                     font-family: Avenir;
-                    padding: 2%;
+                    padding: 1%;
 
                 }
 
@@ -304,17 +310,24 @@ h3 {
             }
 
             &--textarea {
-                color: $color-secondary-mercury;
+                color: $color-primary-black;;
                 width: 75vw;
                 border-color: $color-secondary-mercury;
                 border-radius: .25rem;
                 background-color: $color-secondary-alabaster;
                 height: 8rem;
+                font-family: Avenir;
+                padding: 2% 3%;
 
+                &:active{
+                    border-color: $color-primary-black;
+
+                }
+                
                 &::placeholder {
                     color: $color-primary-black;
-                    padding: .5rem;
                     font-family: Avenir;
+                    
                 }
 
                 @include tablet{
